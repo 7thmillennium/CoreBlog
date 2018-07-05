@@ -69,3 +69,44 @@ Using Identity.Application as default scheme for forbid
 
 Done. To undo this action, use 'ef migrations remove'
 ```
+
+
+# update db to apply context
+`dotnet ef database update --context ApplicationDbContext`
+```
+Table Created
+select ApiClaims
+select ApiResources
+select ApiScopeClaims
+select ApiScopes
+select ApiSecrets
+select AspNetRoleClaims
+select AspNetRoles
+select AspNetUserClaims
+select AspNetUserLogins
+select AspNetUserRoles
+select AspNetUserTokens
+select AspNetUsers 
+```
+`dotnet ef database update --context ConfigurationDbContext`
+```
+Table Created
+select ClientClaims
+select ClientCorsOrigins
+select ClientGrantTypes
+select ClientIdPRestrictions
+select ClientPostLogoutRedirectUris
+select ClientProperties
+select ClientRedirectUris
+select ClientScopes
+select ClientSecrets
+select Clients
+select IdentityClaims
+select IdentityResources
+select __EFMigrationsHistory
+```
+`dotnet ef database update --context PersistedGrantDbContext`
+```
+Table created
+PersistedGrants
+```
