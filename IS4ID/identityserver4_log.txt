@@ -1,0 +1,58 @@
+2018-07-05 22:17:58.956 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-07-05 22:17:58.981 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-07-05 22:17:58.982 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-07-05 22:17:58.982 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-07-05 22:17:58.982 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-07-05 22:18:41.577 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-07-05 22:18:41.604 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-07-05 22:18:41.605 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-07-05 22:18:41.605 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-07-05 22:18:41.605 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-07-05 22:19:27.875 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-07-05 22:19:27.902 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-07-05 22:19:27.903 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-07-05 22:19:27.903 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-07-05 22:19:27.903 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-07-05 22:20:03.468 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-07-05 22:20:03.494 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-07-05 22:20:03.494 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-07-05 22:20:03.494 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-07-05 22:20:03.495 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-07-05 22:21:30.048 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-07-05 22:21:30.092 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-07-05 22:21:30.093 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-07-05 22:21:30.093 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-07-05 22:21:30.093 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-07-05 22:21:31.799 +08:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" text NOT NULL,
+    "Name" varchar(256) NULL,
+    "NormalizedName" varchar(256) NULL,
+    "ConcurrencyStamp" text NULL,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+Npgsql.PostgresException (0x80004005): 42P07: relation "AspNetRoles" already exists
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlConnector.<>c__DisplayClass161_0.<<ReadMessage>g__ReadMessageLong|0>d.MoveNext() in /home/roji/projects/npgsql/src/Npgsql/NpgsqlConnector.cs:line 1032
+--- End of stack trace from previous location where exception was thrown ---
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming) in /home/roji/projects/npgsql/src/Npgsql/NpgsqlDataReader.cs:line 467
+   at Npgsql.NpgsqlDataReader.NextResult() in /home/roji/projects/npgsql/src/Npgsql/NpgsqlDataReader.cs:line 332
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken) in /home/roji/projects/npgsql/src/Npgsql/NpgsqlCommand.cs:line 1219
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken) in /home/roji/projects/npgsql/src/Npgsql/NpgsqlCommand.cs:line 1042
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in /home/roji/projects/npgsql/src/Npgsql/NpgsqlCommand.cs:line 1025
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+2018-07-05 22:56:57.254 +08:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-07-05 22:56:57.280 +08:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-07-05 22:56:57.281 +08:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-07-05 22:56:57.281 +08:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-07-05 22:56:57.282 +08:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-07-05 22:57:13.868 +08:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-07-05 22:57:13.921 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-07-05 22:57:13.922 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-07-05 22:57:13.927 +08:00 [DBG] Start discovery request
+2018-07-05 22:57:16.257 +08:00 [DBG] Found [] as all scopes in database
+2018-07-05 23:12:10.388 +08:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2018-07-05 23:12:10.391 +08:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2018-07-05 23:12:10.391 +08:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2018-07-05 23:12:10.402 +08:00 [DBG] Start key discovery request
