@@ -28,7 +28,8 @@ namespace Arch.IS4Host
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            var migrationsAssembly = typeof(Startup).GetType().Assembly.GetName().Name;
+            var migrationsAssembly = "Arch.IS4Host";
+            // typeof(Startup).GetType().Assembly.GetName().Name;
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(connectionString));
@@ -46,13 +47,14 @@ namespace Arch.IS4Host
                 iis.AutomaticAuthentication = false;
             });
 
-            var builder = services.AddIdentityServer(options =>
-            {
-                options.Events.RaiseErrorEvents = true;
-                options.Events.RaiseInformationEvents = true;
-                options.Events.RaiseFailureEvents = true;
-                options.Events.RaiseSuccessEvents = true;
-            })
+            var builder = services.AddIdentityServer()
+            // options =>
+            // {
+            //     options.Events.RaiseErrorEvents = true;
+            //     options.Events.RaiseInformationEvents = true;
+            //     options.Events.RaiseFailureEvents = true;
+            //     options.Events.RaiseSuccessEvents = true;
+            // })
                 // .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 // .AddInMemoryApiResources(Config.GetApis())
                 // .AddInMemoryClients(Config.GetClients())
@@ -64,7 +66,7 @@ namespace Arch.IS4Host
                 })
 
                 // use postgres for operational data (i.e. token)
-                .AddConfigurationStore(operationalDb => {
+                .AddOperationalStore(operationalDb => {
                     operationalDb.ConfigureDbContext = db => db.UseNpgsql(connectionString,
                     sql => sql.MigrationsAssembly(migrationsAssembly));
                 })

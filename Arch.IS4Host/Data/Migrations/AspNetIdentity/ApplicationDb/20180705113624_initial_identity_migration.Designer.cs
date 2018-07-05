@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Arch.IS4Host.Data.Migrations.AspNetIdentity.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180705105801_initial_identity_migration")]
+    [Migration("20180705113624_initial_identity_migration")]
     partial class initial_identity_migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
